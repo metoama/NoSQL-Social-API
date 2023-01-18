@@ -14,8 +14,18 @@ const UserSchema = new Schema ({
         unique: true,
         match: //check mongoose documentation
     },
-    thoughts: [{ type: Schema.Types.ObjectId, ref: 'Thought' }],
-    friends: [{ type: Schema.Types.ObjectId, ref: 'User' }]
+    thoughts: [
+        { 
+        type: Schema.Types.ObjectId, 
+        ref: 'Thought'
+         }
+        ],
+    friends: [
+        { 
+        type: Schema.Types.ObjectId, 
+        ref: 'User' 
+        }
+        ]
 });
 
 module.exports = mongoose.model('User', UserSchema);
